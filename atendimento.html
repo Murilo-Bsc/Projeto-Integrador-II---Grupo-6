@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atendimento médico - SGA Pronto-Socorro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SGA Pronto-Socorro</h1>
+    <p>Sistema de Atendimentos de Pronto-Socorro</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Recepção</a>
+    <a href="triagem.html">Triagem</a>
+    <a href="painel.html" class="ativo">Painel médico</a>
+  </nav>
+
+  <main>
+    <section class="caixa">
+      <h2>Atendimento médico - AT0001</h2>
+
+      <div class="dados">
+        <p><strong>Paciente:</strong> Maria da Silva</p>
+        <p><strong>Data de nascimento:</strong> 14/03/1968</p>
+        <p><strong>Risco:</strong> <span class="risco vermelho">Vermelho - Emergência</span></p>
+        <p><strong>Queixa:</strong> Dor no peito</p>
+        <p>
+          <strong>Pressão:</strong> 150/95 |
+          <strong>Temperatura:</strong> 36,8 °C |
+          <strong>Batimentos:</strong> 110 bpm
+        </p>
+      </div>
+
+      <form action="painel.html" method="post">
+        <input type="hidden" name="id" value="AT0001">
+        <label for="medicacao">Medicações *</label>
+        <textarea id="medicacao" name="medicacao" placeholder="Medicação, dose e via de administração" required></textarea>
+
+        <label for="observacoes">Observações</label>
+        <textarea id="observacoes" name="observacoes"></textarea>
+
+        <div class="acoes">
+          <button class="botao" type="submit">Confirmar atendimento</button>
+          <a class="botao botao-cinza" href="painel.html">Voltar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

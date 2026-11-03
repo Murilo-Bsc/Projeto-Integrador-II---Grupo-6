@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel médico - SGA Pronto-Socorro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SGA Pronto-Socorro</h1>
+    <p>Sistema de Atendimentos de Pronto-Socorro</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Recepção</a>
+    <a href="triagem.html">Triagem</a>
+    <a href="painel.html" class="ativo">Painel médico</a>
+  </nav>
+
+  <main>
+    <section class="caixa">
+      <h2>Painel de atendimentos</h2>
+      <p>Os pacientes aparecem por ordem de prioridade da classificação de Manchester.</p>
+
+      <div class="legenda">
+        <span class="risco vermelho">Vermelho</span>
+        <span class="risco laranja">Laranja</span>
+        <span class="risco amarelo">Amarelo</span>
+        <span class="risco verde">Verde</span>
+        <span class="risco azul">Azul</span>
+      </div>
+
+      <table>
+        <tr>
+          <th>Número</th>
+          <th>Paciente</th>
+          <th>Nascimento</th>
+          <th>Risco</th>
+          <th>Queixa principal</th>
+          <th>Ação</th>
+        </tr>
+        <tr>
+          <td>AT0001</td>
+          <td>Maria da Silva</td>
+          <td>14/03/1968</td>
+          <td><span class="risco vermelho">Vermelho - Emergência</span></td>
+          <td>Dor no peito</td>
+          <td><a class="botao botao-pequeno" href="atendimento.html?id=AT0001">Atender</a></td>
+        </tr>
+        <tr>
+          <td>AT0005</td>
+          <td>Paulo Mendes</td>
+          <td>07/06/2001</td>
+          <td><span class="risco amarelo">Amarelo - Urgente</span></td>
+          <td>Dor abdominal e náusea</td>
+          <td><a class="botao botao-pequeno" href="atendimento.html?id=AT0005">Atender</a></td>
+        </tr>
+        <tr>
+          <td>AT0003</td>
+          <td>Fernanda Alves</td>
+          <td>30/11/1995</td>
+          <td><span class="risco verde">Verde - Pouco urgente</span></td>
+          <td>Dor muscular</td>
+          <td><a class="botao botao-pequeno" href="atendimento.html?id=AT0003">Atender</a></td>
+        </tr>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

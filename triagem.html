@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triagem - SGA Pronto-Socorro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SGA Pronto-Socorro</h1>
+    <p>Sistema de Atendimentos de Pronto-Socorro</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Recepção</a>
+    <a href="triagem.html" class="ativo">Triagem</a>
+    <a href="painel.html">Painel médico</a>
+  </nav>
+
+  <main>
+    <section class="caixa">
+      <h2>Triagem e classificação</h2>
+      <p>A enfermagem registra os sinais vitais e escolhe a classificação de risco (Protocolo de Manchester).</p>
+
+      <form action="painel.html" method="post">
+        <label for="paciente">Paciente *</label>
+        <select id="paciente" name="paciente" required>
+          <option value="">Selecione</option>
+          <option value="AT0002">AT0002 - Carlos Lima</option>
+          <option value="AT0004">AT0004 - José Pereira</option>
+        </select>
+
+        <label for="queixas">Principais queixas *</label>
+        <textarea id="queixas" name="queixas" placeholder="Ex.: dor de cabeça, náusea, suor excessivo" required></textarea>
+
+        <div class="grade grade-3">
+          <div>
+            <label for="pressao">Pressão arterial *</label>
+            <input id="pressao" name="pressao" type="text" placeholder="120/80" required>
+          </div>
+          <div>
+            <label for="temperatura">Temperatura (°C) *</label>
+            <input id="temperatura" name="temperatura" type="number" step="0.1" placeholder="36.5" required>
+          </div>
+          <div>
+            <label for="batimentos">Batimentos (bpm) *</label>
+            <input id="batimentos" name="batimentos" type="number" placeholder="80" required>
+          </div>
+        </div>
+
+        <label for="risco">Classificação de risco *</label>
+        <select id="risco" name="risco" required>
+          <option value="">Selecione</option>
+          <option value="vermelho">Vermelho - Emergência (atendimento imediato)</option>
+          <option value="laranja">Laranja - Muito urgente (até 10 min)</option>
+          <option value="amarelo">Amarelo - Urgente (até 60 min)</option>
+          <option value="verde">Verde - Pouco urgente (até 120 min)</option>
+          <option value="azul">Azul - Não urgente (até 240 min)</option>
+        </select>
+
+        <div class="acoes">
+          <button class="botao" type="submit">Registrar triagem</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
