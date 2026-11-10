@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cancelar atendimento - SGA Pronto-Socorro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SGA Pronto-Socorro</h1>
+    <p>Sistema de Atendimentos de Pronto-Socorro</p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="ativo">Recepção</a>
+    <a href="triagem.html">Triagem</a>
+    <a href="painel.html">Painel médico</a>
+  </nav>
+
+  <main>
+    <section class="caixa">
+      <h2>Cancelar atendimento</h2>
+      <p class="aviso">Só é possível cancelar atendimentos que ainda não foram confirmados pelo médico.</p>
+
+      <div class="dados">
+        <p><strong>Número:</strong> AT0002</p>
+        <p><strong>Paciente:</strong> Carlos Lima</p>
+        <p><strong>CPF:</strong> 987.654.321-00</p>
+        <p><strong>Status:</strong> Aguardando triagem</p>
+      </div>
+
+      <form action="index.html" method="post">
+        <input type="hidden" name="id" value="AT0002">
+        <label for="motivo">Motivo do cancelamento *</label>
+        <textarea id="motivo" name="motivo" required></textarea>
+
+        <div class="acoes">
+          <button class="botao botao-perigo" type="submit">Confirmar cancelamento</button>
+          <a class="botao botao-cinza" href="index.html">Voltar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

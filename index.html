@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recepção - SGA Pronto-Socorro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SGA Pronto-Socorro</h1>
+    <p>Sistema de Atendimentos de Pronto-Socorro</p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="ativo">Recepção</a>
+    <a href="triagem.html">Triagem</a>
+    <a href="painel.html">Painel médico</a>
+  </nav>
+
+  <main>
+    <section class="caixa">
+      <div class="topo-lista">
+        <h2>Recepção - Atendimentos</h2>
+        <a class="botao" href="cadastro.html">Novo atendimento</a>
+      </div>
+
+      <form class="busca" action="index.html" method="get">
+        <input type="search" name="busca" placeholder="Buscar por nome, CPF ou número do atendimento" aria-label="Buscar atendimento">
+        <button class="botao" type="submit">Consultar</button>
+      </form>
+
+      <table>
+        <tr>
+          <th>Número</th>
+          <th>Paciente</th>
+          <th>CPF</th>
+          <th>Nascimento</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+        <tr>
+          <td>AT0001</td>
+          <td>Maria da Silva</td>
+          <td>123.456.789-00</td>
+          <td>14/03/1968</td>
+          <td>Aguardando médico</td>
+          <td>
+            <a class="botao botao-pequeno" href="cadastro.html?id=AT0001">Alterar</a>
+            <a class="botao botao-pequeno botao-perigo" href="cancelar.html?id=AT0001">Cancelar</a>
+          </td>
+        </tr>
+        <tr>
+          <td>AT0002</td>
+          <td>Carlos Lima</td>
+          <td>987.654.321-00</td>
+          <td>02/09/1990</td>
+          <td>Aguardando triagem</td>
+          <td>
+            <a class="botao botao-pequeno" href="cadastro.html?id=AT0002">Alterar</a>
+            <a class="botao botao-pequeno botao-perigo" href="cancelar.html?id=AT0002">Cancelar</a>
+          </td>
+        </tr>
+        <tr>
+          <td>AT0003</td>
+          <td>Ana Souza</td>
+          <td>111.222.333-44</td>
+          <td>25/12/1985</td>
+          <td>Confirmado</td>
+          <td class="vazio">Atendimento já confirmado</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

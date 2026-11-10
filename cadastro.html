@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de atendimento - SGA Pronto-Socorro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SGA Pronto-Socorro</h1>
+    <p>Sistema de Atendimentos de Pronto-Socorro</p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="ativo">Recepção</a>
+    <a href="triagem.html">Triagem</a>
+    <a href="painel.html">Painel médico</a>
+  </nav>
+
+  <main>
+    <section class="caixa">
+      <h2>Cadastro de atendimento</h2>
+      <p>Registre os dados do paciente. O número do atendimento (ex.: AT0001) é gerado ao salvar.</p>
+
+      <form action="index.html" method="post">
+        <input type="hidden" name="id" value="">
+        <h3>Dados pessoais</h3>
+
+        <label for="nome">Nome completo *</label>
+        <input id="nome" name="nome" type="text" required>
+
+        <div class="grade">
+          <div>
+            <label for="cpf">CPF *</label>
+            <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" required>
+          </div>
+          <div>
+            <label for="rg">RG *</label>
+            <input id="rg" name="rg" type="text" required>
+          </div>
+        </div>
+
+        <label for="nascimento">Data de nascimento *</label>
+        <input id="nascimento" name="nascimento" type="date" required>
+
+        <div class="grade">
+          <div>
+            <label for="pai">Nome do pai</label>
+            <input id="pai" name="pai" type="text">
+          </div>
+          <div>
+            <label for="mae">Nome da mãe *</label>
+            <input id="mae" name="mae" type="text" required>
+          </div>
+        </div>
+
+        <h3>Contato e endereço</h3>
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" placeholder="(19) 90000-0000">
+
+        <label for="endereco">Endereço *</label>
+        <input id="endereco" name="endereco" type="text" placeholder="Rua, número, bairro" required>
+
+        <div class="grade">
+          <div>
+            <label for="cidade">Cidade *</label>
+            <input id="cidade" name="cidade" type="text" required>
+          </div>
+          <div>
+            <label for="cep">CEP</label>
+            <input id="cep" name="cep" type="text" placeholder="00000-000">
+          </div>
+        </div>
+
+        <label for="queixa">Queixa inicial</label>
+        <textarea id="queixa" name="queixa"></textarea>
+
+        <div class="acoes">
+          <button class="botao" type="submit">Salvar atendimento</button>
+          <a class="botao botao-cinza" href="index.html">Voltar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
