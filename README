@@ -1,6 +1,18 @@
+# SGA Pronto-Socorro
+
+Sistema de Atendimentos de Pronto-Socorro (Projeto Integrador 2).
+
 Grupo 6:
-Lucas Joaquim de Souza
-Julia Baxega dos Reis
-Guilherme Paulino dos S. Alves
-Maria Teodora Santana Martin
-Murilo Boschiero
+-Lucas Joaquim de Souza
+-Julia Baxega dos Reis
+-Guilherme Paulino dos S. Alves
+-Maria Teodora Santana Martin
+-Murilo Boschiero
+
+## Estrutura
+
+```
+rotas/             recepcao.js, triagem.js, medico.js
+public/            páginas HTML, style.css e js/
+sql/               scripts do banco
+```
