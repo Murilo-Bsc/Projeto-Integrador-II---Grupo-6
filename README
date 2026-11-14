@@ -11,8 +11,35 @@ Grupo 6:
 
 ## Estrutura
 
-```
 rotas/             recepcao.js, triagem.js, medico.js
 public/            páginas HTML, style.css e js/
 sql/               scripts do banco
-```
+server.js          configuração do Express
+banco.js           conexão e funções de acesso ao Oracle
+util.js            validações e funções de apoio
+
+
+## API
+
+Método e rota | Ação 
+
+GET `/api/recepcao?busca=` | Lista/consulta atendimentos 
+GET `/api/recepcao/:numero` | Dados de um atendimento 
+POST `/api/recepcao` | Cadastra paciente e atendimento 
+PUT `/api/recepcao/:numero` | Altera atendimento 
+POST `/api/recepcao/:numero/cancelar` | Cancela atendimento 
+GET `/api/triagem/fila` | Pacientes aguardando triagem 
+POST `/api/triagem` | Registra a triagem 
+GET `/api/painel` | Fila do médico por prioridade de Manchester 
+GET `/api/painel/:numero` | Dados do atendimento a atender 
+POST `/api/painel/:numero/confirmar` | Lança medicações e confirma 
+
+Erros voltam como `{ "erro": "mensagem" }`.
+
+## Banco de dados
+
+- `paciente`: dados pessoais.
+- `atendimento`: número (AT0001...), paciente, chegada, queixa inicial e status (`AGUARDANDO_TRIAGEM`, `AGUARDANDO_MEDICO`, `CONFIRMADO`, `CANCELADO`).
+- `triagem`: sinais vitais, queixas e cor de risco do atendimento.
+- `classificacao_risco`: cores do Protocolo de Manchester e prioridade.
+- `consulta_medica`: medicações e confirmação do médico.
