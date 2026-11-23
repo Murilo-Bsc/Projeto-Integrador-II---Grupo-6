@@ -19,12 +19,13 @@
   </nav>
 
   <main>
+    <div id="mensagem"></div>
+
     <section class="caixa">
-      <h2>Cadastro de atendimento</h2>
+      <h2 id="titulo">Cadastro de atendimento</h2>
       <p>Registre os dados do paciente. O número do atendimento (ex.: AT0001) é gerado ao salvar.</p>
 
-      <form action="index.html" method="post">
-        <input type="hidden" name="id" value="">
+      <form id="formulario">
         <h3>Dados pessoais</h3>
 
         <label for="nome">Nome completo *</label>
@@ -84,5 +85,7 @@
       </form>
     </section>
   </main>
+  <script src="js/comum.js"></script>
+  <script src="js/cadastro.js"></script>
 </body>
 </html>

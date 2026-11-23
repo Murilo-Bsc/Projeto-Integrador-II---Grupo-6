@@ -19,25 +19,26 @@
   </nav>
 
   <main>
+    <div id="mensagem"></div>
+
     <section class="caixa">
-      <h2>Atendimento médico - AT0001</h2>
+      <h2>Atendimento médico - <span id="numero"></span></h2>
 
       <div class="dados">
-        <p><strong>Paciente:</strong> Maria da Silva</p>
-        <p><strong>Data de nascimento:</strong> 14/03/1968</p>
-        <p><strong>Risco:</strong> <span class="risco vermelho">Vermelho - Emergência</span></p>
-        <p><strong>Queixa:</strong> Dor no peito</p>
+        <p><strong>Paciente:</strong> <span id="nome"></span></p>
+        <p><strong>Data de nascimento:</strong> <span id="nascimento"></span></p>
+        <p><strong>Risco:</strong> <span id="risco" class="risco"></span></p>
+        <p><strong>Queixas:</strong> <span id="queixas"></span></p>
         <p>
-          <strong>Pressão:</strong> 150/95 |
-          <strong>Temperatura:</strong> 36,8 °C |
-          <strong>Batimentos:</strong> 110 bpm
+          <strong>Pressão:</strong> <span id="pressao"></span> |
+          <strong>Temperatura:</strong> <span id="temperatura"></span> °C |
+          <strong>Batimentos:</strong> <span id="batimentos"></span> bpm
         </p>
       </div>
 
-      <form action="painel.html" method="post">
-        <input type="hidden" name="id" value="AT0001">
-        <label for="medicacao">Medicações *</label>
-        <textarea id="medicacao" name="medicacao" placeholder="Medicação, dose e via de administração" required></textarea>
+      <form id="formulario">
+        <label for="medicacoes">Medicações *</label>
+        <textarea id="medicacoes" name="medicacoes" placeholder="Medicação, dose e via de administração" required></textarea>
 
         <label for="observacoes">Observações</label>
         <textarea id="observacoes" name="observacoes"></textarea>
@@ -49,5 +50,7 @@
       </form>
     </section>
   </main>
+  <script src="js/comum.js"></script>
+  <script src="js/atendimento.js"></script>
 </body>
 </html>
