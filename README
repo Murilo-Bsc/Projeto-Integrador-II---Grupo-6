@@ -9,6 +9,19 @@ Sistema de Atendimentos de Pronto-Socorro (Projeto Integrador 2).
 - Maria Teodora Santana Martin
 - Murilo Boschiero
 
+## Como executar
+
+1. Esteja na rede da puc, presencialmente ou por vpn, para se conectar ao banco;
+2. Tenha node instalado no computador;
+3. Execute os comandos:
+
+npm install
+npm start
+
+4. Acesse http://localhost:3000
+
+Para parar o site, aperte CTRL + C no terminal em que foi aberto o node.
+
 ## Estrutura
 
 rotas/             recepcao.js, triagem.js, medico.js
@@ -18,6 +31,16 @@ server.js          configuração do Express
 banco.js           conexão e funções de acesso ao Oracle
 util.js            validações e funções de apoio
 
+## Páginas
+
+Página | Função
+
+`index.html` | Recepção: consulta, alteração e cancelamento
+`cadastro.html` | Novo atendimento (ou alteração, com `?id=AT0001`)
+`cancelar.html` | Cancelamento (`?id=AT0001`)
+`triagem.html` | Triagem da enfermagem
+`painel.html` | Painel de atendimentos do médico
+`atendimento.html` | Medicações e confirmação (`?id=AT0001`)
 
 ## API
 

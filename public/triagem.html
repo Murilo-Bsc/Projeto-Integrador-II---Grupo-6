@@ -19,16 +19,16 @@
   </nav>
 
   <main>
+    <div id="mensagem"></div>
+
     <section class="caixa">
       <h2>Triagem e classificação</h2>
       <p>A enfermagem registra os sinais vitais e escolhe a classificação de risco (Protocolo de Manchester).</p>
 
-      <form action="painel.html" method="post">
+      <form id="formulario">
         <label for="paciente">Paciente *</label>
         <select id="paciente" name="paciente" required>
           <option value="">Selecione</option>
-          <option value="AT0002">AT0002 - Carlos Lima</option>
-          <option value="AT0004">AT0004 - José Pereira</option>
         </select>
 
         <label for="queixas">Principais queixas *</label>
@@ -65,5 +65,7 @@
       </form>
     </section>
   </main>
+  <script src="js/comum.js"></script>
+  <script src="js/triagem.js"></script>
 </body>
 </html>

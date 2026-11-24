@@ -19,19 +19,20 @@
   </nav>
 
   <main>
+    <div id="mensagem"></div>
+
     <section class="caixa">
       <h2>Cancelar atendimento</h2>
       <p class="aviso">Só é possível cancelar atendimentos que ainda não foram confirmados pelo médico.</p>
 
       <div class="dados">
-        <p><strong>Número:</strong> AT0002</p>
-        <p><strong>Paciente:</strong> Carlos Lima</p>
-        <p><strong>CPF:</strong> 987.654.321-00</p>
-        <p><strong>Status:</strong> Aguardando triagem</p>
+        <p><strong>Número:</strong> <span id="numero"></span></p>
+        <p><strong>Paciente:</strong> <span id="nome"></span></p>
+        <p><strong>CPF:</strong> <span id="cpf"></span></p>
+        <p><strong>Status:</strong> <span id="situacao"></span></p>
       </div>
 
-      <form action="index.html" method="post">
-        <input type="hidden" name="id" value="AT0002">
+      <form id="formulario">
         <label for="motivo">Motivo do cancelamento *</label>
         <textarea id="motivo" name="motivo" required></textarea>
 
@@ -42,5 +43,7 @@
       </form>
     </section>
   </main>
+  <script src="js/comum.js"></script>
+  <script src="js/cancelar.js"></script>
 </body>
 </html>
